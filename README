@@ -16,7 +16,10 @@ Creating a website
  * Add create-site.sh to your path
  * mkdir newproject;cd newproject
  * create-site.sh
- * Edit settings.py and set database details
+ * Edit settings.py and set database details.
+   See the pinax and satchmo documentation for more configuration options.
+   http://www.satchmoproject.com/docs/svn/new_installation.html
+   http://pinaxproject.com/docs/dev/customization.html
  * You need to patch the django_friend/models.py to resolve a conflict with a satchmo model.
    {{BUILDOUT_EGGS}}/django_friends-0.1.2-py2.5.egg/friends/models.py
 
@@ -32,4 +35,7 @@ Creating a website
  * bin/django build_media
  * bin/django-dev runserver
 
+It may be helpful to load the satchmo sample data to have something to work with.
 
+bin/django satchmo_load_l10n
+bin/django satchmo_load_store
