@@ -1,0 +1,28 @@
+pinax-satchmo-buildout
+
+This project aims to kick start websites using pinax and satchmo, providing the core buildout.cfg and settings files to get new projects up and running.
+
+Requirements
+ * git
+ * mercurial
+ * svn
+
+Creating a website
+
+ * add create-site.sh to your path
+ * mkdir newproject;cd newproject
+ * create-site.sh
+ * edit settings.py and set database details
+ * bin/django syncdb
+ * bin/django build_media
+ * bin/django 
+
+Customizing settings
+
+The default settings will use a full pinax install based off the social_project
+You'll need to change the database details 
+
+TODO:
+ * upgrade cms to latest git version.  tested and the admin save was bombing accessing thread local user.
+
+
