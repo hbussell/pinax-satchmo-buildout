@@ -9,20 +9,23 @@ Requirements
 
 Creating a website
 
- * add create-site.sh to your path
+ * Add create-site.sh to your path
  * mkdir newproject;cd newproject
  * create-site.sh
- * edit settings.py and set database details
+ * Edit settings.py and set database details
+ * You need to patch the django_friend/models.py to resolve a conflict with a satchmo model.
+   {{BUILDOUT_EGGS}}/django_friends-0.1.2-py2.5.egg/friends/models.py
+
+   if you use the default buildout settigs the path is:
+   /var/egg-cache/django_friends-0.1.2-py2.5.egg/friends/models.py
+   
+   edit #45
+   users = models.ManyToManyField(User)
+   
+   add a related name
+   users = models.ManyToManyField(User, related_name="contacts")
  * bin/django syncdb
  * bin/django build_media
- * bin/django 
-
-Customizing settings
-
-The default settings will use a full pinax install based off the social_project
-You'll need to change the database details 
-
-TODO:
- * upgrade cms to latest git version.  tested and the admin save was bombing accessing thread local user.
+ * bin/django-dev runserver
 
 
