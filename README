@@ -2,6 +2,10 @@ pinax-satchmo-buildout
 
 This project aims to kick start websites using pinax and satchmo, providing the core buildout.cfg and settings files to get new projects up and running.
 
+The buildout will create a new website using the Django 1.1, pinax from git, and satchmo from hg.
+
+There is a sample website project based off pinax social_project which intergrates the satchmo blocks into the base.html template.
+
 Requirements
  * git
  * mercurial
