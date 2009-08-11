@@ -1,6 +1,6 @@
---------------
+----------------------
 pinax-satchmo-buildout
---------------
+----------------------
 
 This project aims to kick start websites using pinax and satchmo, providing the core buildout.cfg and settings files to get new projects up and running.
 
@@ -25,10 +25,12 @@ Install
 
     * Add create-site.sh to your path
 
-    * ::mkdir newproject
+    * ::
+      mkdir newproject
       cd newproject
 
-    * ::create-site.sh
+    * ::
+      create-site.sh
 
     * Edit website/settings.py and set database details.
       See the pinax and satchmo documentation for more configuration options.
@@ -45,20 +47,25 @@ Install
       add a related name
       users = models.ManyToManyField(User, related_name="contacts")
 
-    * ::bin/django syncdb
+    * ::
+      bin/django syncdb
 
-    * ::bin/django build_media
+    * ::
+      bin/django build_media
 
-    * ::bin/django-dev runserver
+    * ::
+      bin/django-dev runserver
 
 Post install
 ============
 
 It may be helpful to load the satchmo sample data to have something to work with.
 
-::bin/django satchmo_load_l10n
+::
+bin/django satchmo_load_l10n
 
-::bin/django satchmo_load_store
+::
+bin/django satchmo_load_store
 
 
 Customize the buildout
