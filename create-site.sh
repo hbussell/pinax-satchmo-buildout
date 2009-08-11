@@ -23,8 +23,14 @@ fi
 
 virtualenv --no-site-packages env
 env/bin/easy_install zc.buildout
-#env/bin/easy_install MySQL-python
+
+
+# we should be able to install MySQL-python as an egg in buildout but it fails to find the distribution.
+env/bin/easy_install http://pypi.weblife.com.au/MySQL-python-1.2.3c1.tar.gz
+
 env/bin/buildout init
+# remove the empty generated buildout.cfg
+rm buildout.cfg
 
 if [ ! "buildout.tmp" ]; then
     mv buildout.tmp buildout.cfg
