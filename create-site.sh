@@ -17,9 +17,11 @@ if [ ! -d "website" ]; then
     cp -R /tmp/pinax-satchmo-buildout/website/ .
 fi
 
-if [ ! "buildout.cfg" ]; then
+if [ "buildout.cfg" ]; then
+    echo 'Backup buildout.cfg'
     mv buildout.cfg buildout.tmp
 fi
+
 
 virtualenv --no-site-packages env
 env/bin/easy_install zc.buildout
@@ -32,11 +34,13 @@ env/bin/buildout init
 # remove the empty generated buildout.cfg
 rm buildout.cfg
 
-if [ ! "buildout.tmp" ]; then
+if [ "buildout.tmp" ]; then
+    echo 'overwrite buildout.cfg from backup'
     mv buildout.tmp buildout.cfg
 fi
 
 if [ ! -f "buildout.cfg" ]; then
+    echo 'bring in buildout.cfg from repo'
     cp /tmp/pinax-satchmo-buildout/buildout.cfg .
 fi
 
