@@ -27,12 +27,12 @@ Install
 
     * Create newproject directory ::
 
-      mkdir newproject
-      cd newproject
+        mkdir newproject
+        cd newproject
 
     * Execute create-site.sh ::
 
-      create-site.sh
+        create-site.sh
 
     * Edit website/settings.py and set database details.
       See the pinax and satchmo documentation for more configuration options.
@@ -51,15 +51,15 @@ Install
 
     * syncdb ::
 
-      bin/django syncdb
+        bin/django syncdb
 
     * build_media ::
 
-      bin/django build_media
+        bin/django build_media
 
     * runserver using development settings ::
 
-      bin/django-dev runserver
+        bin/django-dev runserver
 
 Post install
 ============
