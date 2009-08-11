@@ -39,15 +39,17 @@ Install
       http://www.satchmoproject.com/docs/svn/new_installation.html
       http://pinaxproject.com/docs/dev/customization.html
 
-    * You need to patch the django_friend/models.py to resolve a conflict with a satchmo model.
+    * You need to patch the django_friend/models.py to resolve a conflict with a satchmo model.::
 
-      all_src/friends/models.py
+          all_src/friends/models.py
    
-      edit #45
-      users = models.ManyToManyField(User)
+      edit #45::
+
+        users = models.ManyToManyField(User)
    
-      add a related name
-      users = models.ManyToManyField(User, related_name="contacts")
+      add a related name::
+
+        users = models.ManyToManyField(User, related_name="contacts")
 
     * syncdb ::
 
