@@ -35,8 +35,11 @@ Install
         create-site.sh
 
     * Edit website/settings.py and set database details.
+
       See the pinax and satchmo documentation for more configuration options.
+
       http://www.satchmoproject.com/docs/svn/new_installation.html
+
       http://pinaxproject.com/docs/dev/customization.html
 
     * You need to patch the django_friend/models.py to resolve a conflict with a satchmo model.::
