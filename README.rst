@@ -42,7 +42,7 @@ Install
 
       http://pinaxproject.com/docs/dev/customization.html
 
-    * You need to patch the django_friend/models.py to resolve a conflict with a satchmo model.::
+    * You need to patch the django_friends models.py to resolve a conflict with a satchmo model.::
 
           all_src/friends/models.py
    
@@ -90,7 +90,7 @@ The script will see your buildout.cfg and not overwrite it.
 It is often a good idea to set a path for download-cache in the main buildout configuration.
 See http://pypi.python.org/pypi/zc.buildout#using-a-download-cache
 
-By default buildout will store eggs in the eggs directory in the top of the project structure.  
+By default buildout will store eggs in the ``eggs`` directory of the project structure.  
 Using a common eggs directory allows projects to share the same eggs and makes builds much quicker.
 
 Set the eggs-directory in the main buildout configuration to a writeable path.  
