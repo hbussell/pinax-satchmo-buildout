@@ -25,12 +25,12 @@ Install
 
     * Add create-site.sh to your path
 
-    * ::
+    * Create newproject directory ::
 
       mkdir newproject
       cd newproject
 
-    * ::
+    * Execute create-site.sh ::
 
       create-site.sh
 
@@ -49,15 +49,15 @@ Install
       add a related name
       users = models.ManyToManyField(User, related_name="contacts")
 
-    * ::
+    * syncdb ::
 
       bin/django syncdb
 
-    * ::
+    * build_media ::
 
       bin/django build_media
 
-    * ::
+    * runserver using development settings ::
 
       bin/django-dev runserver
 
@@ -66,13 +66,13 @@ Post install
 
 It may be helpful to load the satchmo sample data to have something to work with.
 
-::
+load sample locale text ::
 
-bin/django satchmo_load_l10n
+    bin/django satchmo_load_l10n
 
-::
+load sample store ::
 
-bin/django satchmo_load_store
+    bin/django satchmo_load_store
 
 
 Customize the buildout
