@@ -61,7 +61,7 @@ Install
 
     * runserver using development settings ::
 
-        bin/django-dev runserver
+        bin/django runserver
 
 Post install
 ============
