@@ -26,10 +26,12 @@ Install
     * Add create-site.sh to your path
 
     * ::
+
       mkdir newproject
       cd newproject
 
     * ::
+
       create-site.sh
 
     * Edit website/settings.py and set database details.
@@ -48,12 +50,15 @@ Install
       users = models.ManyToManyField(User, related_name="contacts")
 
     * ::
+
       bin/django syncdb
 
     * ::
+
       bin/django build_media
 
     * ::
+
       bin/django-dev runserver
 
 Post install
@@ -62,9 +67,11 @@ Post install
 It may be helpful to load the satchmo sample data to have something to work with.
 
 ::
+
 bin/django satchmo_load_l10n
 
 ::
+
 bin/django satchmo_load_store
 
 
