@@ -23,7 +23,7 @@ Requirements
 Install
 =======
 
-    * Add create-site.sh to your path
+    * Checkout this project to any path
 
     * Create newproject directory ::
 
@@ -32,7 +32,7 @@ Install
 
     * Execute create-site.sh ::
 
-        create-site.sh
+        INSTALL_DIR/create-site.sh
 
     * Edit website/settings.py and set database details.
 
@@ -60,7 +60,7 @@ Install
 
     * build_media ::
 
-        bin/django build_media
+        bin/django build_media --all
 
     * runserver using development settings ::
 
