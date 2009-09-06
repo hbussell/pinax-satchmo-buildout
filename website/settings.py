@@ -59,11 +59,11 @@ USE_I18N = False
 # Example: "/home/media/media.lawrence.com/"
 
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, "site_media")
-
+STATIC_ROOT = MEDIA_ROOT
 # URL that handles the media served from MEDIA_ROOT.
 # Example: "http://media.lawrence.com"
 MEDIA_URL = '/site_media/'
-
+STATIC_URL = MEDIA_URL
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
@@ -109,8 +109,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.media",
     "django.core.context_processors.request",
 
-    "pinax.core.context_processors.contact_email",
-    "pinax.core.context_processors.site_name",
+#    "pinax.core.context_processors.contact_email",
+#    "pinax.core.context_processors.site_name",
 
     "notification.context_processors.notification",
     "announcements.context_processors.site_wide_announcements",
