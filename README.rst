@@ -12,6 +12,8 @@ There is a sample website project based off pinax social_project which intergrat
 Requirements
 ============
 
+    * python-dev
+
     * virtualenv 
 
     * git
